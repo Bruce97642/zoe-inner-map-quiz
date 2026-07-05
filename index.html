@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZOE 內在阻礙地圖測驗｜心靈 Love Beauty 香氣感官所</title>
+<meta name="description" content="3 分鐘覺察你的內在狀態:情緒負載、五向度覺察力、行動準備度。ZOE 療癒與內在轉化研究院出品的免費自我覺察測驗。">
+<meta property="og:title" content="ZOE 內在阻礙地圖測驗">
+<meta property="og:description" content="3 分鐘看見你的內在卡點與療癒方向 🌸">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#c97b8c; --rose-deep:#a85c6f; --rose-soft:#f3dee3;
+  --lavender:#9a8bb5; --cream:#fdf9f4; --ink:#4a3f44; --ink-soft:#8a7a80;
+  --gold:#c9a86a; --card:#ffffff; --shadow:0 8px 30px rgba(168,92,111,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Noto Sans TC',sans-serif;color:var(--ink);background:var(--cream);
+  background-image:radial-gradient(circle at 15% 10%,rgba(201,123,140,.08),transparent 40%),
+                   radial-gradient(circle at 85% 90%,rgba(154,139,181,.08),transparent 40%);
+  min-height:100vh;line-height:1.7;
+}
+.wrap{max-width:640px;margin:0 auto;padding:24px 18px 60px}
+.serif{font-family:'Noto Serif TC',serif}
+
+/* ---- 首頁 ---- */
+.hero{text-align:center;padding:36px 8px 8px}
+.hero .flower{font-size:2.4rem}
+.hero h1{font-family:'Noto Serif TC',serif;font-size:1.7rem;color:var(--rose-deep);margin:10px 0 4px;letter-spacing:.08em}
+.hero .sub{color:var(--ink-soft);font-size:.95rem;letter-spacing:.15em;margin-bottom:22px}
+.card{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:26px 22px;margin-bottom:18px}
+.intro p{margin-bottom:12px;font-size:.98rem}
+.intro .hl{color:var(--rose-deep);font-weight:700}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0}
+.pill{background:var(--rose-soft);color:var(--rose-deep);border-radius:999px;padding:5px 14px;font-size:.85rem}
+.btn{
+  display:block;width:100%;border:none;cursor:pointer;text-align:center;text-decoration:none;
+  background:linear-gradient(135deg,var(--rose),var(--rose-deep));color:#fff;
+  font-size:1.05rem;font-weight:700;letter-spacing:.2em;padding:15px;border-radius:999px;
+  box-shadow:0 6px 18px rgba(168,92,111,.35);transition:transform .15s,box-shadow .15s;
+  font-family:'Noto Sans TC',sans-serif;
+}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:#fff;color:var(--rose-deep);border:1.5px solid var(--rose);box-shadow:none}
+.btn.lav{background:linear-gradient(135deg,#a99bc4,#7d6b9e);box-shadow:0 6px 18px rgba(125,107,158,.3)}
+.note{font-size:.8rem;color:var(--ink-soft);text-align:center;margin-top:14px}
+
+/* ---- 測驗 ---- */
+.progress{height:6px;background:#eee0e4;border-radius:99px;margin:18px 0 26px;overflow:hidden}
+.progress>div{height:100%;background:linear-gradient(90deg,var(--rose),var(--lavender));border-radius:99px;transition:width .3s}
+.qnum{color:var(--gold);font-size:.85rem;font-weight:700;letter-spacing:.2em;margin-bottom:6px}
+.qtitle{font-family:'Noto Serif TC',serif;font-size:1.2rem;color:var(--ink);margin-bottom:4px}
+.qhint{font-size:.85rem;color:var(--ink-soft);margin-bottom:18px}
+.opt{
+  display:block;width:100%;text-align:left;background:#fff;border:1.5px solid #eadfe3;
+  border-radius:14px;padding:13px 16px;font-size:.98rem;color:var(--ink);cursor:pointer;
+  margin-bottom:10px;transition:all .15s;font-family:'Noto Sans TC',sans-serif;
+}
+.opt:hover{border-color:var(--rose)}
+.opt.sel{background:var(--rose-soft);border-color:var(--rose-deep);color:var(--rose-deep);font-weight:700}
+.slider-box{padding:10px 4px 4px}
+.slider-val{
+  font-family:'Noto Serif TC',serif;font-size:2.6rem;color:var(--rose-deep);
+  text-align:center;margin-bottom:6px;font-weight:700;
+}
+input[type=range]{
+  -webkit-appearance:none;width:100%;height:8px;border-radius:99px;
+  background:linear-gradient(90deg,var(--rose-soft),var(--rose));outline:none;margin:14px 0 6px;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:28px;height:28px;border-radius:50%;
+  background:#fff;border:3px solid var(--rose-deep);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+input[type=range]::-moz-range-thumb{
+  width:24px;height:24px;border-radius:50%;background:#fff;border:3px solid var(--rose-deep);cursor:pointer;
+}
+.slider-labels{display:flex;justify-content:space-between;font-size:.75rem;color:var(--ink-soft)}
+.nav-row{display:flex;gap:10px;margin-top:22px}
+.nav-row .btn{flex:1;padding:12px;font-size:.95rem}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.part-tag{
+  display:inline-block;background:linear-gradient(135deg,var(--lavender),var(--rose));
+  color:#fff;border-radius:8px;padding:2px 10px;font-size:.78rem;letter-spacing:.15em;margin-bottom:10px;
+}
+
+/* ---- 結果 ---- */
+.result-head{text-align:center;padding:10px 0 4px}
+.result-head .tag{color:var(--ink-soft);letter-spacing:.25em;font-size:.8rem}
+.result-type{font-family:'Noto Serif TC',serif;font-size:2rem;color:var(--rose-deep);margin:6px 0;letter-spacing:.1em}
+.result-sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:8px}
+.meter{margin:14px 0}
+.meter .m-label{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:5px}
+.meter .m-label b{color:var(--rose-deep)}
+.m-bar{height:12px;background:#f1e6ea;border-radius:99px;overflow:hidden}
+.m-bar>div{height:100%;border-radius:99px;transition:width 1s ease}
+.sec-title{font-family:'Noto Serif TC',serif;font-size:1.1rem;color:var(--rose-deep);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.radar-wrap{display:flex;justify-content:center;margin:6px 0 10px}
+.dim-row{display:flex;justify-content:space-between;align-items:center;padding:7px 2px;border-bottom:1px dashed #eee0e4;font-size:.92rem}
+.dim-row:last-child{border-bottom:none}
+.dim-row .score{font-weight:700;color:var(--rose-deep)}
+.focus-box{
+  background:linear-gradient(135deg,#faf3f5,#f4eef8);border-radius:14px;padding:16px;margin-top:14px;
+  border-left:4px solid var(--rose);font-size:.95rem;
+}
+.focus-box b{color:var(--rose-deep)}
+.summary-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.summary-tags .pill{font-size:.8rem}
+.divider{text-align:center;color:var(--gold);margin:26px 0 18px;letter-spacing:.4em;font-size:.85rem}
+.footer{text-align:center;font-size:.78rem;color:var(--ink-soft);margin-top:34px;line-height:2}
+.footer a{color:var(--lavender)}
+.hidden{display:none}
+.fade{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.toast{
+  position:fixed;left:50%;bottom:30px;transform:translateX(-50%);
+  background:var(--ink);color:#fff;border-radius:99px;padding:10px 22px;font-size:.9rem;
+  opacity:0;pointer-events:none;transition:opacity .3s;z-index:99;
+}
+.toast.show{opacity:.95}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ========== 首頁 ========== -->
+  <div id="pageIntro">
+    <div class="hero">
+      <div class="flower">🌸</div>
+      <h1>ZOE 內在阻礙地圖測驗</h1>
+      <div class="sub">心靈 Love Beauty 香氣感官所</div>
+    </div>
+    <div class="card intro fade">
+      <p>Namaskaram 🙏🏻 歡迎來到這裡。</p>
+      <p>這份測驗將陪你在 <span class="hl">3 分鐘</span> 內,溫柔地看見:</p>
+      <div class="pill-row">
+        <span class="pill">🌊 情緒負載指數</span>
+        <span class="pill">🔍 五向度覺察力</span>
+        <span class="pill">🔥 行動準備度</span>
+      </div>
+      <p>它沒有對錯,也不需要「想得很完整」。請依照直覺作答,把目前最真實的狀態留下來即可。</p>
+      <p>測驗結束後,你會得到一份屬於自己的 <span class="hl">內在阻礙地圖</span>,以及適合你的療癒方向。</p>
+      <button class="btn" onclick="startQuiz()">開 始 測 驗</button>
+      <p class="note">共 14 題 ・ 資料只存在你的手機裡,不會上傳 🌿</p>
+    </div>
+  </div>
+
+  <!-- ========== 測驗頁 ========== -->
+  <div id="pageQuiz" class="hidden">
+    <div class="progress"><div id="progBar" style="width:0%"></div></div>
+    <div class="card fade" id="qCard"></div>
+  </div>
+
+  <!-- ========== 結果頁 ========== -->
+  <div id="pageResult" class="hidden"></div>
+
+  <div class="footer">
+    🌸 ZOE 療癒與內在轉化研究院 ・ 心靈 Love Beauty 香氣感官所<br>
+    本測驗為自我覺察工具,非醫療診斷;如有身心困擾請尋求專業協助。<br>
+    <a href="https://github.com/Bruce97642/zoe-inner-map-quiz" target="_blank" rel="noopener">開源專案 MIT License</a>
+  </div>
+</div>
+<div class="toast" id="toast">已複製 ✓</div>
+
+<script>
+/* ================== 設定(要改連結改這裡) ================== */
+const CONFIG = {
+  // 官方 Line 連結(請換成工坊官方 Line 的邀請連結)
+  LINE_URL: "",
+  // 正式預約表單(情緒芳療支持系統預約表)
+  BOOKING_URL: "https://docs.google.com/forms/d/e/1FAIpQLSe_RZCjIF29rel4UV2BOPRCGek-8KVDSbb6YcMVRtMvDkSgOQ/viewform",
+};
+
+/* ================== 題目定義 ================== */
+const QUESTIONS = [
+  // ---- Part 1 現況掃描 ----
+  {part:"PART 1 ・ 現況掃描", type:"single", key:"role",
+   title:"你目前的主要角色是?",
+   opts:["母親/照顧者","上班族","自由工作者/創業者","學生","其他"]},
+
+  {part:"PART 1 ・ 現況掃描", type:"multi", key:"emotions",
+   title:"最近最常出現的情緒或狀態是?",
+   hint:"可複選,選出最有感的幾個",
+   opts:["焦慮/緊張","壓力/崩潰感","無力/疲憊","自我懷疑/不安全感","易怒/爆炸點低","失落/悲傷","內疚/自責","頭痛/偏頭痛","胸悶/心悸","肩頸僵硬/緊繃"]},
+
+  {part:"PART 1 ・ 現況掃描", type:"slider", key:"intensity",
+   title:"這些情緒/狀態的強度大約是?",
+   min:"完全平靜", max:"強烈到幾乎無法承受"},
+
+  {part:"PART 1 ・ 現況掃描", type:"single", key:"duration",
+   title:"這樣的狀態持續多久了?",
+   opts:["少於 1 個月","1–3 個月","3–12 個月","已經 1 年以上"]},
+
+  {part:"PART 1 ・ 現況掃描", type:"multi", key:"triggers",
+   title:"這些情緒通常在哪些情境被觸發?",
+   hint:"可複選",
+   opts:["工作壓力","人際或家庭關係","育兒","財務/收入問題","健康狀態","過去創傷記憶"]},
+
+  {part:"PART 1 ・ 現況掃描", type:"multi", key:"impacts",
+   title:"這個狀態影響到你的哪些方面?",
+   hint:"可複選",
+   opts:["睡眠時間/品質","工作效率","親密關係/家庭關係","身體能量失衡","自信與情緒穩定","行動力/思維判斷能力"]},
+
+  {part:"PART 1 ・ 現況掃描", type:"multi", key:"coping",
+   title:"當情緒或不適出現時,你通常會怎麼做?",
+   hint:"可複選",
+   opts:["忍住/壓抑","爆發/失控","逃避/拖延","找人傾訴","尋求問題解決與行動"]},
+
+  // ---- Part 2 五向度覺察自評 ----
+  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_behavior",
+   title:"行為 Behavior",
+   hint:"我能覺察自己的行為反應模式(拖延、逃避、討好、易怒…)",
+   min:"完全沒感覺", max:"看得非常清楚"},
+
+  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_emotion",
+   title:"情緒 Emotion",
+   hint:"我能覺察自己情緒的來源,知道自己「為什麼」有這些感受",
+   min:"完全沒感覺", max:"看得非常清楚"},
+
+  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_mind",
+   title:"思維 Mind",
+   hint:"我能覺察自己的慣性想法與自我對話(批判、擔憂、比較…)",
+   min:"完全沒感覺", max:"看得非常清楚"},
+
+  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_body",
+   title:"身體 Body",
+   hint:"我能覺察身體發出的訊號(緊繃、疲憊、疼痛、淺呼吸…)",
+   min:"完全沒感覺", max:"看得非常清楚"},
+
+  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_energy",
+   title:"能量 Energy",
+   hint:"我能覺察自己的能量高低,知道什麼事讓我耗損、什麼讓我充電",
+   min:"完全沒感覺", max:"看得非常清楚"},
+
+  // ---- Part 3 改變準備 ----
+  {part:"PART 3 ・ 改變準備", type:"single", key:"wish",
+   title:"如果 30–90 天後,你的人生有一個明顯改變,你最希望是?",
+   opts:["情緒問題明顯下降","恢復行動與執行力","更穩定的關係","自信心提升","減少內在壓力與內耗"]},
+
+  {part:"PART 3 ・ 改變準備", type:"slider", key:"decision",
+   title:"你目前對改變現況的決心程度?",
+   min:"完全沒有", max:"我想成為全新的自己"},
+];
+
+const DIM_INFO = {
+  dim_behavior:{name:"行為 Behavior", icon:"🌿",
+    advice:"你的卡點藏在「做與不做」之間。建議從一個 5 分鐘就能完成的小行動開始,讓身體記住「我做得到」的感覺。柑橘果香類香氣(甜橙、佛手柑)能溫柔提振行動力。"},
+  dim_emotion:{name:"情緒 Emotion", icon:"🌊",
+    advice:"情緒需要先被看見,才能被釋放。試著每天給自己 3 分鐘,說出或寫下「我現在感覺到…」。花香類香氣(玫瑰、依蘭)能陪伴情緒安穩落地。"},
+  dim_mind:{name:"思維 Mind", icon:"💭",
+    advice:"腦中的自我對話正在悄悄決定你的世界。當批判聲音出現時,試著問:「這是事實,還是想法?」草本類香氣(迷迭香、薄荷)有助於思緒清晰。"},
+  dim_body:{name:"身體 Body", icon:"🌸",
+    advice:"身體是情緒的地圖,緊繃與疲憊都是訊息。每天睡前掃描一次身體,從頭到腳問候它。木質類香氣(雪松、檀香)能幫助扎根與放鬆。"},
+  dim_energy:{name:"能量 Energy", icon:"✨",
+    advice:"你的能量流向哪裡,人生就長成什麼樣子。列出「耗電清單」與「充電清單」,每週刻意安排一件充電的事。樹脂類香氣(乳香)適合修復與調頻。"},
+};
+
+const TYPES = {
+  highLoad_highReady:{name:"破繭者", icon:"🦋",
+    sub:"負載很重,但你的改變之火已經點燃",
+    desc:"你正承受著不小的內在壓力,同時心中有一股清楚的力量:「我不想再這樣下去。」這是最適合啟動深度轉化的時刻——你需要的不是更用力,而是一套有方法、有陪伴的路徑,讓能量用在對的地方。"},
+  highLoad_lowReady:{name:"休眠的火山", icon:"🌋",
+    sub:"累積了很多,先安定,再談改變",
+    desc:"你的內在累積了許多情緒與疲憊,此刻談「改變」可能都覺得好遠——這完全沒有關係。你現在最需要的是先安定下來:被好好接住、好好呼吸、好好睡一覺。等內在有了空間,改變會自然發生。"},
+  lowLoad_highReady:{name:"顯化行動者", icon:"🔥",
+    sub:"狀態穩定,決心明確,適合加速",
+    desc:"你的內在負載相對輕盈,決心又高——這是非常珍貴的狀態!此刻很適合把能量投注在「創造」而非「修復」:設定一個 30–90 天的目標,搭配定期的覺察與調頻,你會走得又快又穩。"},
+  lowLoad_lowReady:{name:"靜水深流", icon:"🌙",
+    sub:"目前平穩,適合深化覺察、預防耗損",
+    desc:"你目前的狀態相對平衡,沒有急迫的卡點。這正是深化自我覺察的好時機——在風平浪靜時認識自己,風雨來時才不會迷航。維持滋養自己的習慣,持續累積內在的定力。"},
+};
+
+/* ================== 狀態 ================== */
+let cur = 0;
+const answers = {};
+
+function startQuiz(){
+  document.getElementById("pageIntro").classList.add("hidden");
+  document.getElementById("pageQuiz").classList.remove("hidden");
+  cur = 0;
+  renderQ();
+  window.scrollTo(0,0);
+}
+
+function renderQ(){
+  const q = QUESTIONS[cur];
+  document.getElementById("progBar").style.width = ((cur)/QUESTIONS.length*100)+"%";
+  const card = document.getElementById("qCard");
+  let html = `<span class="part-tag">${q.part}</span>
+    <div class="qnum">Q${cur+1} / ${QUESTIONS.length}</div>
+    <div class="qtitle serif">${q.title}</div>
+    <div class="qhint">${q.hint||""}</div>`;
+
+  if(q.type === "single"){
+    html += q.opts.map((o,i)=>{
+      const sel = answers[q.key]===i ? "sel":"";
+      return `<button class="opt ${sel}" onclick="pickSingle(${i})">${o}</button>`;
+    }).join("");
+  } else if(q.type === "multi"){
+    const chosen = answers[q.key]||[];
+    html += q.opts.map((o,i)=>{
+      const sel = chosen.includes(i) ? "sel":"";
+      return `<button class="opt ${sel}" onclick="pickMulti(${i})">${sel?"✓ ":""}${o}</button>`;
+    }).join("");
+  } else if(q.type === "slider"){
+    const v = (q.key in answers) ? answers[q.key] : 5;
+    answers[q.key] = v;
+    html += `<div class="slider-box">
+      <div class="slider-val" id="sVal">${v}</div>
+      <input type="range" min="0" max="10" step="1" value="${v}"
+        oninput="document.getElementById('sVal').textContent=this.value;answers['${q.key}']=+this.value">
+      <div class="slider-labels"><span>0 ${q.min}</span><span>${q.max} 10</span></div>
+    </div>`;
+  }
+
+  html += `<div class="nav-row">
+    ${cur>0 ? `<button class="btn ghost" onclick="prevQ()">上一題</button>`:""}
+    <button class="btn" id="nextBtn" onclick="nextQ()" ${canNext()?"":"disabled"}>
+      ${cur===QUESTIONS.length-1 ? "看我的內在地圖 🌸" : "下一題"}
+    </button>
+  </div>`;
+
+  card.innerHTML = html;
+  card.classList.remove("fade"); void card.offsetWidth; card.classList.add("fade");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function canNext(){
+  const q = QUESTIONS[cur];
+  if(q.type==="single") return (q.key in answers);
+  if(q.type==="multi") return (answers[q.key]||[]).length>0;
+  return true;
+}
+function pickSingle(i){
+  answers[QUESTIONS[cur].key]=i;
+  renderQ();
+}
+function pickMulti(i){
+  const k = QUESTIONS[cur].key;
+  answers[k] = answers[k]||[];
+  const idx = answers[k].indexOf(i);
+  if(idx>=0) answers[k].splice(idx,1); else answers[k].push(i);
+  renderQ();
+}
+function prevQ(){ if(cur>0){cur--;renderQ();} }
+function nextQ(){
+  if(!canNext()) return;
+  if(cur < QUESTIONS.length-1){ cur++; renderQ(); }
+  else showResult();
+}
+
+/* ================== 計分 ================== */
+function calc(){
+  const emoCount = (answers.emotions||[]).length;
+  const impactCount = (answers.impacts||[]).length;
+  const durScore = (answers.duration??0)+1; // 1~4
+  const load = Math.round(
+    (emoCount/10)*25 + (answers.intensity/10)*35 + (durScore/4)*20 + (impactCount/6)*20
+  );
+
+  const dims = ["dim_behavior","dim_emotion","dim_mind","dim_body","dim_energy"];
+  const awareness = Math.round(dims.reduce((s,k)=>s+answers[k],0)/50*100);
+  let lowDim = dims[0];
+  dims.forEach(k=>{ if(answers[k] < answers[lowDim]) lowDim = k; });
+
+  const coping = answers.coping||[];
+  const cq = QUESTIONS.find(q=>q.key==="coping");
+  const copingNames = coping.map(i=>cq.opts[i]);
+  let bonus = 0;
+  if(copingNames.includes("尋求問題解決與行動")) bonus += 15;
+  if(copingNames.includes("找人傾訴")) bonus += 5;
+  const readiness = Math.min(100, Math.round((answers.decision/10)*85 + bonus));
+
+  const typeKey = (load>=55?"highLoad":"lowLoad") + "_" + (readiness>=60?"highReady":"lowReady");
+  return {load, awareness, readiness, lowDim, type:TYPES[typeKey], dims};
+}
+
+/* ================== 結果頁 ================== */
+function radarSVG(dims){
+  const cx=130, cy=120, R=85;
+  const pts = n => dims.map((k,i)=>{
+    const ang = -Math.PI/2 + i*2*Math.PI/5;
+    const r = R * n(k);
+    return (cx+r*Math.cos(ang)).toFixed(1)+","+(cy+r*Math.sin(ang)).toFixed(1);
+  }).join(" ");
+  const grid = [0.33,0.66,1].map(f=>
+    `<polygon points="${pts(()=>f)}" fill="none" stroke="#e8dbe0" stroke-width="1"/>`).join("");
+  const axes = dims.map((k,i)=>{
+    const ang = -Math.PI/2 + i*2*Math.PI/5;
+    const lx = cx+(R+22)*Math.cos(ang), ly = cy+(R+18)*Math.sin(ang);
+    return `<line x1="${cx}" y1="${cy}" x2="${cx+R*Math.cos(ang)}" y2="${cy+R*Math.sin(ang)}" stroke="#e8dbe0"/>
+      <text x="${lx}" y="${ly}" text-anchor="middle" font-size="12" fill="#8a7a80">${DIM_INFO[k].name.split(" ")[0]}</text>`;
+  }).join("");
+  const shape = pts(k=>answers[k]/10);
+  return `<svg width="260" height="245" viewBox="0 0 260 245">
+    ${grid}${axes}
+    <polygon points="${shape}" fill="rgba(201,123,140,.28)" stroke="#c97b8c" stroke-width="2"/>
+  </svg>`;
+}
+
+function meterColor(v){
+  if(v>=70) return "linear-gradient(90deg,#c97b8c,#a85c6f)";
+  if(v>=40) return "linear-gradient(90deg,#d9a9b6,#c97b8c)";
+  return "linear-gradient(90deg,#cfc3de,#9a8bb5)";
+}
+
+function showResult(){
+  const r = calc();
+  document.getElementById("pageQuiz").classList.add("hidden");
+  const page = document.getElementById("pageResult");
+  page.classList.remove("hidden");
+
+  const emoQ = QUESTIONS.find(q=>q.key==="emotions");
+  const trgQ = QUESTIONS.find(q=>q.key==="triggers");
+  const wishQ = QUESTIONS.find(q=>q.key==="wish");
+  const emoNames = (answers.emotions||[]).map(i=>emoQ.opts[i]);
+  const trgNames = (answers.triggers||[]).map(i=>trgQ.opts[i]);
+  const wishName = wishQ.opts[answers.wish];
+  const low = DIM_INFO[r.lowDim];
+
+  page.innerHTML = `
+  <div class="result-head fade">
+    <div class="tag">你 的 內 在 阻 礙 地 圖</div>
+    <div style="font-size:3rem">${r.type.icon}</div>
+    <div class="result-type">${r.type.name}</div>
+    <div class="result-sub">${r.type.sub}</div>
+  </div>
+
+  <div class="card fade">
+    <p style="font-size:.96rem">${r.type.desc}</p>
+    <div class="meter" style="margin-top:20px">
+      <div class="m-label"><span>🌊 情緒負載指數</span><b>${r.load} / 100</b></div>
+      <div class="m-bar"><div style="width:${r.load}%;background:${meterColor(r.load)}"></div></div>
+    </div>
+    <div class="meter">
+      <div class="m-label"><span>🔍 覺察力</span><b>${r.awareness} / 100</b></div>
+      <div class="m-bar"><div style="width:${r.awareness}%;background:${meterColor(r.awareness)}"></div></div>
+    </div>
+    <div class="meter">
+      <div class="m-label"><span>🔥 行動準備度</span><b>${r.readiness} / 100</b></div>
+      <div class="m-bar"><div style="width:${r.readiness}%;background:${meterColor(r.readiness)}"></div></div>
+    </div>
+  </div>
+
+  <div class="card fade">
+    <div class="sec-title">🗺️ 五向度覺察雷達</div>
+    <div class="radar-wrap">${radarSVG(r.dims)}</div>
+    ${r.dims.map(k=>`<div class="dim-row">
+      <span>${DIM_INFO[k].icon} ${DIM_INFO[k].name}</span>
+      <span class="score">${answers[k]} / 10</span></div>`).join("")}
+    <div class="focus-box">
+      <b>${low.icon} 最需要溫柔關注的向度:${low.name}</b><br>${low.advice}
+    </div>
+  </div>
+
+  <div class="card fade">
+    <div class="sec-title">📌 你的狀態速寫</div>
+    <div style="font-size:.92rem;color:var(--ink-soft)">最常出現的情緒</div>
+    <div class="summary-tags">${emoNames.map(n=>`<span class="pill">${n}</span>`).join("")||"<span class='pill'>—</span>"}</div>
+    <div style="font-size:.92rem;color:var(--ink-soft);margin-top:12px">常見觸發情境</div>
+    <div class="summary-tags">${trgNames.map(n=>`<span class="pill">${n}</span>`).join("")||"<span class='pill'>—</span>"}</div>
+    <div style="font-size:.92rem;color:var(--ink-soft);margin-top:12px">30–90 天最希望的改變</div>
+    <div class="summary-tags"><span class="pill">✨ ${wishName}</span></div>
+  </div>
+
+  <div class="divider">・ 🌸 ・</div>
+
+  <div class="card fade" style="text-align:center">
+    <div class="sec-title" style="justify-content:center">下一步,讓改變真的發生</div>
+    <p style="font-size:.93rem;margin-bottom:16px">
+      把你的測驗結果傳給 ZOE,工坊會依照你的內在地圖,<br>
+      為你規劃最適合的 1 對 1 靜心 × 芳療 × 情緒療癒體驗 💖
+    </p>
+    <button class="btn ghost" style="margin-bottom:10px" onclick="copyResult()">📋 複製我的測驗結果</button>
+    ${CONFIG.LINE_URL ? `<a class="btn lav" style="margin-bottom:10px" href="${CONFIG.LINE_URL}" target="_blank" rel="noopener">💬 加入官方 Line 傳結果給 ZOE</a>`:""}
+    <a class="btn" href="${CONFIG.BOOKING_URL}" target="_blank" rel="noopener">🌸 立即預約 1 對 1 療癒體驗</a>
+    <p class="note">工坊採全預約制,請於至少 3 天前預約</p>
+  </div>
+
+  <div class="card fade" style="text-align:center">
+    <button class="btn ghost" onclick="location.reload()">↻ 重新測驗</button>
+  </div>`;
+  window.scrollTo(0,0);
+}
+
+function copyResult(){
+  const r = calc();
+  const emoQ = QUESTIONS.find(q=>q.key==="emotions");
+  const trgQ = QUESTIONS.find(q=>q.key==="triggers");
+  const wishQ = QUESTIONS.find(q=>q.key==="wish");
+  const low = DIM_INFO[r.lowDim];
+  const text =
+`🌸 ZOE 內在阻礙地圖測驗結果
+━━━━━━━━━━━━
+我的類型:${r.type.icon} ${r.type.name}
+🌊 情緒負載:${r.load}/100
+🔍 覺察力:${r.awareness}/100
+🔥 行動準備度:${r.readiness}/100
+最需要關注:${low.name}
+五向度:行為${answers.dim_behavior}・情緒${answers.dim_emotion}・思維${answers.dim_mind}・身體${answers.dim_body}・能量${answers.dim_energy}
+常見情緒:${(answers.emotions||[]).map(i=>emoQ.opts[i]).join("、")||"—"}
+觸發情境:${(answers.triggers||[]).map(i=>trgQ.opts[i]).join("、")||"—"}
+期待的改變:${wishQ.opts[answers.wish]}
+━━━━━━━━━━━━
+測驗連結:${location.href.split("#")[0]}`;
+  navigator.clipboard.writeText(text).then(()=>{
+    const t = document.getElementById("toast");
+    t.classList.add("show");
+    setTimeout(()=>t.classList.remove("show"),2000);
+  }).catch(()=>{ prompt("長按複製你的結果:", text); });
+}
+</script>
+</body>
+</html>
