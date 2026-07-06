@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZOE 內在阻礙地圖測驗｜心靈 Love Beauty 香氣感官所</title>
-<meta name="description" content="3 分鐘覺察你的內在狀態:情緒負載、五向度覺察力、行動準備度。ZOE 療癒與內在轉化研究院出品的免費自我覺察測驗。">
+<meta name="description" content="3 分鐘覺察你的內在狀態:情緒強度、五重內在感知、行動意願。ZOE 療癒與內在轉化研究院出品的免費自我覺察測驗。">
 <meta property="og:title" content="ZOE 內在阻礙地圖測驗">
 <meta property="og:description" content="3 分鐘看見你的內在卡點與療癒方向 🌸">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -136,9 +136,9 @@ input[type=range]::-moz-range-thumb{
       <p>Namaskaram 🙏🏻 歡迎來到這裡。</p>
       <p>這份測驗將陪你在 <span class="hl">3 分鐘</span> 內,溫柔地看見:</p>
       <div class="pill-row">
-        <span class="pill">🌊 情緒負載指數</span>
-        <span class="pill">🔍 五向度覺察力</span>
-        <span class="pill">🔥 行動準備度</span>
+        <span class="pill">🌊 情緒強度</span>
+        <span class="pill">🔍 五重內在感知</span>
+        <span class="pill">🔥 行動意願</span>
       </div>
       <p>它沒有對錯,也不需要「想得很完整」。請依照直覺作答,把目前最真實的狀態留下來即可。</p>
       <p>測驗結束後,你會得到一份屬於自己的 <span class="hl">內在阻礙地圖</span>,以及適合你的療癒方向。</p>
@@ -167,7 +167,7 @@ input[type=range]::-moz-range-thumb{
 <script>
 /* ================== 設定(要改連結改這裡) ================== */
 const CONFIG = {
-  // 官方 Line 連結(請換成工坊官方 Line 的邀請連結)
+  // 官方 Line 連結(請換成香氣感官所官方 Line 的邀請連結)
   LINE_URL: "",
   // 正式預約表單(情緒芳療支持系統預約表)
   BOOKING_URL: "https://docs.google.com/forms/d/e/1FAIpQLSe_RZCjIF29rel4UV2BOPRCGek-8KVDSbb6YcMVRtMvDkSgOQ/viewform",
@@ -183,7 +183,7 @@ const QUESTIONS = [
   {part:"PART 1 ・ 現況掃描", type:"multi", key:"emotions",
    title:"最近最常出現的情緒或狀態是?",
    hint:"可複選,選出最有感的幾個",
-   opts:["焦慮/緊張","壓力/崩潰感","無力/疲憊","自我懷疑/不安全感","易怒/爆炸點低","失落/悲傷","內疚/自責","頭痛/偏頭痛","胸悶/心悸","肩頸僵硬/緊繃"]},
+   opts:["焦慮/緊張","壓力/崩潰感","無力/疲憊","自我懷疑/不安全感","易怒/爆炸點低","失落/悲傷","內疚/自責","頭痛/偏頭痛","胸悶/心悸","肩頸僵硬/緊繃","完全沒有感覺"]},
 
   {part:"PART 1 ・ 現況掃描", type:"slider", key:"intensity",
    title:"這些情緒/狀態的強度大約是?",
@@ -208,28 +208,28 @@ const QUESTIONS = [
    hint:"可複選",
    opts:["忍住/壓抑","爆發/失控","逃避/拖延","找人傾訴","尋求問題解決與行動"]},
 
-  // ---- Part 2 五向度覺察自評 ----
-  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_behavior",
+  // ---- Part 2 五重內在感知自評 ----
+  {part:"PART 2 ・ 五重內在感知", type:"slider", key:"dim_behavior",
    title:"行為 Behavior",
    hint:"我能覺察自己的行為反應模式(拖延、逃避、討好、易怒…)",
    min:"完全沒感覺", max:"看得非常清楚"},
 
-  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_emotion",
+  {part:"PART 2 ・ 五重內在感知", type:"slider", key:"dim_emotion",
    title:"情緒 Emotion",
    hint:"我能覺察自己情緒的來源,知道自己「為什麼」有這些感受",
    min:"完全沒感覺", max:"看得非常清楚"},
 
-  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_mind",
+  {part:"PART 2 ・ 五重內在感知", type:"slider", key:"dim_mind",
    title:"思維 Mind",
    hint:"我能覺察自己的慣性想法與自我對話(批判、擔憂、比較…)",
    min:"完全沒感覺", max:"看得非常清楚"},
 
-  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_body",
+  {part:"PART 2 ・ 五重內在感知", type:"slider", key:"dim_body",
    title:"身體 Body",
    hint:"我能覺察身體發出的訊號(緊繃、疲憊、疼痛、淺呼吸…)",
    min:"完全沒感覺", max:"看得非常清楚"},
 
-  {part:"PART 2 ・ 五向度覺察", type:"slider", key:"dim_energy",
+  {part:"PART 2 ・ 五重內在感知", type:"slider", key:"dim_energy",
    title:"能量 Energy",
    hint:"我能覺察自己的能量高低,知道什麼事讓我耗損、什麼讓我充電",
    min:"完全沒感覺", max:"看得非常清楚"},
@@ -353,7 +353,10 @@ function nextQ(){
 
 /* ================== 計分 ================== */
 function calc(){
-  const emoCount = (answers.emotions||[]).length;
+  const emoQ0 = QUESTIONS.find(q=>q.key==="emotions");
+  const noneIdx = emoQ0.opts.indexOf("完全沒有感覺");
+  // 「完全沒有感覺」不列入情緒強度計數
+  const emoCount = (answers.emotions||[]).filter(i=>i!==noneIdx).length;
   const impactCount = (answers.impacts||[]).length;
   const durScore = (answers.duration??0)+1; // 1~4
   const load = Math.round(
@@ -431,7 +434,7 @@ function showResult(){
   <div class="card fade">
     <p style="font-size:.96rem">${r.type.desc}</p>
     <div class="meter" style="margin-top:20px">
-      <div class="m-label"><span>🌊 情緒負載指數</span><b>${r.load} / 100</b></div>
+      <div class="m-label"><span>🌊 情緒強度</span><b>${r.load} / 100</b></div>
       <div class="m-bar"><div style="width:${r.load}%;background:${meterColor(r.load)}"></div></div>
     </div>
     <div class="meter">
@@ -439,13 +442,13 @@ function showResult(){
       <div class="m-bar"><div style="width:${r.awareness}%;background:${meterColor(r.awareness)}"></div></div>
     </div>
     <div class="meter">
-      <div class="m-label"><span>🔥 行動準備度</span><b>${r.readiness} / 100</b></div>
+      <div class="m-label"><span>🔥 行動意願</span><b>${r.readiness} / 100</b></div>
       <div class="m-bar"><div style="width:${r.readiness}%;background:${meterColor(r.readiness)}"></div></div>
     </div>
   </div>
 
   <div class="card fade">
-    <div class="sec-title">🗺️ 五向度覺察雷達</div>
+    <div class="sec-title">🗺️ 五重內在感知雷達</div>
     <div class="radar-wrap">${radarSVG(r.dims)}</div>
     ${r.dims.map(k=>`<div class="dim-row">
       <span>${DIM_INFO[k].icon} ${DIM_INFO[k].name}</span>
@@ -470,13 +473,13 @@ function showResult(){
   <div class="card fade" style="text-align:center">
     <div class="sec-title" style="justify-content:center">下一步,讓改變真的發生</div>
     <p style="font-size:.93rem;margin-bottom:16px">
-      把你的測驗結果傳給 ZOE,工坊會依照你的內在地圖,<br>
+      把你的測驗結果傳給 ZOE,香氣感官所會依照你的內在地圖,<br>
       為你規劃最適合的 1 對 1 靜心 × 芳療 × 情緒療癒體驗 💖
     </p>
     <button class="btn ghost" style="margin-bottom:10px" onclick="copyResult()">📋 複製我的測驗結果</button>
     ${CONFIG.LINE_URL ? `<a class="btn lav" style="margin-bottom:10px" href="${CONFIG.LINE_URL}" target="_blank" rel="noopener">💬 加入官方 Line 傳結果給 ZOE</a>`:""}
     <a class="btn" href="${CONFIG.BOOKING_URL}" target="_blank" rel="noopener">🌸 立即預約 1 對 1 療癒體驗</a>
-    <p class="note">工坊採全預約制,請於至少 3 天前預約</p>
+    <p class="note">香氣感官所採全預約制,請於至少 3 天前預約</p>
   </div>
 
   <div class="card fade" style="text-align:center">
@@ -495,9 +498,9 @@ function copyResult(){
 `🌸 ZOE 內在阻礙地圖測驗結果
 ━━━━━━━━━━━━
 我的類型:${r.type.icon} ${r.type.name}
-🌊 情緒負載:${r.load}/100
+🌊 情緒強度:${r.load}/100
 🔍 覺察力:${r.awareness}/100
-🔥 行動準備度:${r.readiness}/100
+🔥 行動意願:${r.readiness}/100
 最需要關注:${low.name}
 五向度:行為${answers.dim_behavior}・情緒${answers.dim_emotion}・思維${answers.dim_mind}・身體${answers.dim_body}・能量${answers.dim_energy}
 常見情緒:${(answers.emotions||[]).map(i=>emoQ.opts[i]).join("、")||"—"}
